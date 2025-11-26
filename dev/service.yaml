@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: flask-app-service
 spec:
-  selector:
-    app: flask-app
+  type: NodePort
   ports:
     - protocol: TCP
-      port: 80          # Service port
-      targetPort: 6000  # Container port
-  type: NodePort      # or ClusterIP if only internal
+      port: 80
+      targetPort: 6000
+  selector:
+    app: flask-app
