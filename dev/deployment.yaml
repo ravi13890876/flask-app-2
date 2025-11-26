@@ -14,9 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: kind-registry:5000/flask-app:latest
-        imagePullPolicy: Always
+        image: localhost:5001/flask-app:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 6000
-      imagePullSecrets:
-      - name: local-registry
