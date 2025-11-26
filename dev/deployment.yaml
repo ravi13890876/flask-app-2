@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: localhost:7000/flask-app:latest
-        imagePullPolicy: Always
+        image: localhost:5001/flask-app:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
